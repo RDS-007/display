@@ -269,6 +269,10 @@ struct LayerStackFlags {
       uint32_t hdr_present : 1;  //!< Set if stack has HDR content
 
       uint32_t secure_camera_present : 1;  //!< Set if secure camera present
+
+#ifdef FOD_ZPOS
+      uint32_t fod_pressed_present : 1;
+#endif
     };
 
     uint32_t flags = 0;               //!< For initialization purpose only.
